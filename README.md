@@ -1,3 +1,6 @@
+In order to unify the approaches followed for Bitnami containers and Bitnami Helm charts, we are moving the different `bitnami/bitnami-docker-<container>` repositories to a single monorepo `bitnami/containers`. Please follow [bitnami/containers](https://github.com/bitnami/containers) to keep you updated about the latest Bitnami images.
+
+More information here: https://blog.bitnami.com/2022/07/new-source-of-truth-bitnami-containers.html
 # Golang packaged by Bitnami
 
 ## What is Golang?
@@ -28,18 +31,15 @@ $ docker-compose up -d
 * Bitnami containers, virtual machines and cloud images use the same components and configuration approach - making it easy to switch between formats based on your project needs.
 * All our images are based on [minideb](https://github.com/bitnami/minideb) a minimalist Debian based container image which gives you a small base container image and the familiarity of a leading Linux distribution.
 * All Bitnami images available in Docker Hub are signed with [Docker Content Trust (DCT)](https://docs.docker.com/engine/security/trust/content_trust/). You can use `DOCKER_CONTENT_TRUST=1` to verify the integrity of the images.
-* Bitnami container images are released daily with the latest distribution packages available.
-
-> This [CVE scan report](https://quay.io/repository/bitnami/golang?tab=tags) contains a security report with all open CVEs. To get the list of actionable security issues, find the "latest" tag, click the vulnerability report link under the corresponding "Security scan" field and then select the "Only show fixable" filter on the next page.
+* Bitnami container images are released on a regular basis with the latest distribution packages available.
 
 ## Supported tags and respective `Dockerfile` links
 
 Learn more about the Bitnami tagging policy and the difference between rolling tags and immutable tags [in our documentation page](https://docs.bitnami.com/tutorials/understand-rolling-tags-containers/).
 
 
-* [`1.18`, `1.18-debian-10`, `1.18.0`, `1.18.0-debian-10-r15`, `latest` (1.18/debian-10/Dockerfile)](https://github.com/bitnami/bitnami-docker-golang/blob/1.18.0-debian-10-r15/1.18/debian-10/Dockerfile)
-* [`1.17`, `1.17-debian-10`, `1.17.8`, `1.17.8-debian-10-r28` (1.17/debian-10/Dockerfile)](https://github.com/bitnami/bitnami-docker-golang/blob/1.17.8-debian-10-r28/1.17/debian-10/Dockerfile)
-* [`1.16`, `1.16-debian-10`, `1.16.15`, `1.16.15-debian-10-r27` (1.16/debian-10/Dockerfile)](https://github.com/bitnami/bitnami-docker-golang/blob/1.16.15-debian-10-r27/1.16/debian-10/Dockerfile)
+* [`1.18`, `1.18-debian-11`, `1.18.4`, `1.18.4-debian-11-r7`, `latest` (1.18/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-golang/blob/1.18.4-debian-11-r7/1.18/debian-11/Dockerfile)
+* [`1.17`, `1.17-debian-11`, `1.17.12`, `1.17.12-debian-11-r6` (1.17/debian-11/Dockerfile)](https://github.com/bitnami/bitnami-docker-golang/blob/1.17.12-debian-11-r6/1.17/debian-11/Dockerfile)
 
 Subscribe to project updates by watching the [bitnami/golang GitHub repo](https://github.com/bitnami/bitnami-docker-golang).
 
@@ -60,7 +60,7 @@ $ docker pull bitnami/golang:[TAG]
 If you wish, you can also build the image yourself.
 
 ```console
-$ docker build -t bitnami/golang:latest 'https://github.com/bitnami/bitnami-docker-golang.git#master:1.18/debian-10'
+$ docker build -t bitnami/golang:latest 'https://github.com/bitnami/bitnami-docker-golang.git#master:1.18/debian-11'
 ```
 
 ## Persisting your application
@@ -165,10 +165,6 @@ Re-create your container from the new image.
 ```console
 $ docker run --name golang bitnami/golang:latest
 ```
-
-## Branch Deprecation Notice
-
-Golang's branch 1.16 is no longer maintained by upstream and is now internally tagged as to be deprecated. This branch will no longer be released in our catalog a month after this notice is published, but already released container images will still persist in the registries. Valid to be removed starting on: 04-16-2022
 
 ## Contributing
 
